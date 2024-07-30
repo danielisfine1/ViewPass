@@ -57,17 +57,21 @@
                   </div>
             </div>
             <div class="calculator">
-                  <h2>Use our calculator to estimate your revenue</h2>
-                  <div>
-                        <h2>Tickets available:</h2>
-                        <input type="text" id="tickets" name="tickets" value="">
+                  <div class="calculator_header">
+                        <h2>Use our calculator to estimate your revenue</h2>
                   </div>
-                  <div>
-                        <h2>Price per ticket:</h2>
-                        <input type="text" id="price" name="price" value="">
-                  </div>
-                  <div>
-                        <button id="calculate">Calculate</button>
+                  <div class="ticket_container">
+                        <div class="ticket_avail">
+                              <h2>Tickets available:</h2>
+                              <input type="text" id="tickets" name="tickets" value="">
+                        </div>
+                        <div class="ticket_price">
+                              <h2>Price per ticket:</h2>
+                              <input type="text" id="price" name="price" value="">
+                        </div>
+                        <div class="ticket_button">
+                              <button id="calculate">Calculate</button>
+                        </div>
                   </div>
             </div>
       </div>
@@ -85,6 +89,14 @@
             font-family: "Inter";
       }
 
+      .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            width: auto;
+      }
+
       .images_container {
             display: flex;
             justify-content: space-between;
@@ -95,5 +107,55 @@
             justify-content: center;
             flex-direction: column;
             width: 20%;
+      }
+
+      .calculator_header {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: x-large;
+            margin-top: 65px;
+      }
+
+      .ticket_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30vh;
+            padding: 0 10%;
+      }
+
+      .ticket_avail,
+      .ticket_price {
+            padding: 5px;
+            /* margin: 5px; */
+            text-align: start;
+            flex: 1;
+            margin-bottom: 75px;
+      }
+
+      #tickets,
+      #price {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            outline: none;
+            width: 80%;
+            text-align: end;
+            font-style: inter;
+            font-size: 25px;
+            font-weight: 900;
+      }
+
+      #calculate {
+            margin-bottom: 13px;
+            width: 170px;
+            height: 85px;
+            border-radius: 20px;
+            text-align: center;
+            font-style: inter;
+            font-size: 25px;
+            font-weight: 900;
+            text-decoration: underline;
       }
 </style>
