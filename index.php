@@ -11,10 +11,14 @@
       <div class="container">
             <div class="header">
                   <h1>ViewPass</h1>
-                  <h3>Log in</h3>
+                  <a href="https://en.wikipedia.org/wiki/Nutria">
+                        <h3 style="text-decoration: underline;">Log in</h3>
+                  </a>
             </div>
             <div class="content">
-                  <h2>Turn your physical event into a digital experience with ViewPass</h2>
+                  <div class="content_header">
+                        <h2>Turn your physical event into a digital experience with ViewPass</h2>
+                  </div>
                   <div class="images_container">
                         <?php
 
@@ -82,7 +86,12 @@
             background-color: #1a1a1a;
       }
 
-      h1,
+      h1 {
+            color: white;
+            font-family: "Inter";
+            font-weight: bolder;
+      }
+
       h2,
       h3 {
             color: white;
@@ -91,15 +100,25 @@
 
       .header {
             display: flex;
+            padding-left: 5px;
+            padding-right: 10px;
             flex-direction: row;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
             width: auto;
+      }
+
+      .content_header {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 20px;
       }
 
       .images_container {
             display: flex;
             justify-content: space-between;
+            padding: 20px;
       }
 
       .image {
@@ -107,6 +126,12 @@
             justify-content: center;
             flex-direction: column;
             width: 20%;
+            transition: transform .2s;
+      }
+
+      .image:hover {
+            transform: scale(1.2);
+            cursor: pointer;
       }
 
       .calculator_header {
@@ -114,7 +139,7 @@
             justify-content: center;
             font-weight: bold;
             font-size: x-large;
-            margin-top: 65px;
+            margin-top: 30px;
       }
 
       .ticket_container {
@@ -128,7 +153,6 @@
       .ticket_avail,
       .ticket_price {
             padding: 5px;
-            /* margin: 5px; */
             text-align: start;
             flex: 1;
             margin-bottom: 75px;
